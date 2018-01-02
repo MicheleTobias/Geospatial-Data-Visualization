@@ -41,3 +41,7 @@ Reference: [University of Colorado's Cartographic Communication Site](https://ww
 
 1. [Python Graph Gallery](https://python-graph-gallery.com/)
 1. [D3 Gallery](https://github.com/d3/d3/wiki/Gallery)
+
+## Possible Papers
+
+1. http://www.sciencedirect.com/science/article/pii/S0924271615002439
