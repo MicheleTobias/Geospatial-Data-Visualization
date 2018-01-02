@@ -1,6 +1,8 @@
 # Geospatial-Data-Visualization
 This is a workshop in progress.  
 
+This is a geospatial data visualization workshop with hands-on examples using QGIS 2.14-2.18.
+
 # What is Data Visualization?  How does it apply to geospatial data?
 Data visualization is the current term used to describe the process of representing data in a way that communicates clearly.
 
@@ -32,6 +34,7 @@ Reference: [University of Colorado's Cartographic Communication Site](https://ww
 
 ## Tutorials
 
+1. [QGIS 2.18 Training Manual](https://docs.qgis.org/2.18/en/docs/training_manual/)
 1. [Alberto Cairo's Tutorials](http://www.thefunctionalart.com/p/instructors-guide.html)
 
 ## Galleries
