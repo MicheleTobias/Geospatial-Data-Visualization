@@ -30,6 +30,10 @@ Reference: [University of Colorado's Cartographic Communication Site](https://ww
 1. [University of Colorado's Cartographic Communication Site](https://www.colorado.edu/geography/gcraft/notes/cartocom/cartocom_f.html)
 1. [Ordinance Survey Geo Data Viz Toolkit](https://github.com/OrdnanceSurvey/GeoDataViz-Toolkit)
 
+## Tutorials
+
+1. [Alberto Cairo's Tutorials](http://www.thefunctionalart.com/p/instructors-guide.html)
+
 ## Galleries
 
 1. [Python Graph Gallery](https://python-graph-gallery.com/)
