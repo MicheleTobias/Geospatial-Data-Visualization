@@ -1,6 +1,11 @@
 # Geospatial-Data-Visualization
 This is a workshop in progress.  
 
+# What is Data Visualization?  How does it apply to geospatial data?
+Data visualization is the current term used to describe the process of representing data in a way that communicates clearly.
+
+"Data visualization" has been present in the field of geography for centuries as cartography.
+
 # Types of Data
 
 1. Nominal
