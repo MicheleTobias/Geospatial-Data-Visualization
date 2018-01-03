@@ -10,19 +10,28 @@ Data visualization is the current term used to describe the process of represent
 
 # Types of Data
 
-1. Nominal
-1. Ordinal
-1. Interval
-1. Ratio
+Understanding what type of data you are working with is important.  Where the data shows up on the map is handled by the geometries stored in your spatial data file (shapefile, geojson, geotiff, etc.) but how you choose to represent the attribute (non-spatial) data is up to you.  To communicate clearly, how you represent your data should be driven, in part, by the type of data it is.
+
+| Type | Explanation | Examples |
+|------|------|------|
+| Nominal | Categories | Land Use Type: agriculture, industrial, residential, etc. |
+| Ordinal | Hierarchical Categories | Business Size: small, medium, large |
+| Interval | Numbers in which zero has no real meaning, relative distances between numbers has meaning, but ratios between numbers does not make sense | Farenheit temperature measurements |
+| Ratio | Numbers witha set zero, ratios between numbers make sense | Weight of harvested biomass |
+
+
 
 Reference: [University of Colorado's Cartographic Communication Site](https://www.colorado.edu/geography/gcraft/notes/cartocom/cartocom_f.html)
 
 # Visualization Considerations for Each Type of Data
 
-1. Nominal
-1. Ordinal
-1. Interval
-1. Ratio
+| Type | Considerations | Colors | Non-Color |
+|------|------|------|------|
+| Nominal | Representation should not imply a hierarchy or numerical relationship between the categories | Varying hues ("random" colors) | Icons |
+| Ordinal | Representation SHOULD imply a hierarchy, no special treatment for zero  | Color gradient | Size gradient |
+| Interval | Representation SHOULD imply a hierarchy, no special treatment for zero | Color gradient | Size gradient |
+| Ratio | Representation SHOULD imply a hierarchy, think about the meaning of zero | Color gradient, diverging color gradient | Size gradient |
+
 
 
 # Resources:
@@ -31,6 +40,7 @@ Reference: [University of Colorado's Cartographic Communication Site](https://ww
 
 1. [University of Colorado's Cartographic Communication Site](https://www.colorado.edu/geography/gcraft/notes/cartocom/cartocom_f.html)
 1. [Ordinance Survey Geo Data Viz Toolkit](https://github.com/OrdnanceSurvey/GeoDataViz-Toolkit)
+1. [Visualizing Data's Resource List](http://www.visualisingdata.com/resources/)
 
 ## Tutorials
 
@@ -42,6 +52,12 @@ Reference: [University of Colorado's Cartographic Communication Site](https://ww
 
 1. [Python Graph Gallery](https://python-graph-gallery.com/)
 1. [D3 Gallery](https://github.com/d3/d3/wiki/Gallery)
+
+## Colors
+
+1. [Color Brewer](http://colorhunt.co/)
+1. [Adobe Color](https://color.adobe.com/create/color-wheel/)
+1. [Color Hunt](http://colorhunt.co/)
 
 ## Possible Papers
 
