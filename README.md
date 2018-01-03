@@ -35,6 +35,7 @@ Reference: [University of Colorado's Cartographic Communication Site](https://ww
 ## Tutorials
 
 1. [QGIS 2.18 Training Manual](https://docs.qgis.org/2.18/en/docs/training_manual/)
+1. [Lyzi Diamond's Site](http://lyzidiamond.com/)
 1. [Alberto Cairo's Tutorials](http://www.thefunctionalart.com/p/instructors-guide.html)
 
 ## Galleries
