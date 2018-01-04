@@ -23,7 +23,7 @@ Reference: [University of Colorado's Cartographic Communication Site](https://ww
 
 # Visualization Considerations for Each Type of Data
 
-| Type | Nominal: | Ordinal: | Interval & Ratio: |
+| Type | Nominal | Ordinal | Interval & Ratio |
 |------|------|------|------|
 | | Unranked categories | Ranked or ordered categories | Continuous numbers |
 | | | | |
