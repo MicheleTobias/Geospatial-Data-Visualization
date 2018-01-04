@@ -19,18 +19,9 @@ Understanding what type of data you are working with is important.  Where the da
 | Interval | Numbers in which zero has no real meaning, relative distances between numbers has meaning, but ratios between numbers does not make sense | Farenheit temperature measurements |
 | Ratio | Numbers witha set zero, ratios between numbers make sense | Weight of harvested biomass |
 
-
-
 Reference: [University of Colorado's Cartographic Communication Site](https://www.colorado.edu/geography/gcraft/notes/cartocom/cartocom_f.html)
 
 # Visualization Considerations for Each Type of Data
-
-| Type | Considerations | Colors | Non-Color |
-|------|------|------|------|
-| Nominal | Representation should not imply a hierarchy or numerical relationship between the categories | Varying hues ("random" colors) | Icons |
-| Ordinal | Representation SHOULD imply a hierarchy, no special treatment for zero  | Color gradient | Size gradient |
-| Interval | Representation SHOULD imply a hierarchy, no special treatment for zero | Color gradient | Size gradient |
-| Ratio | Representation SHOULD imply a hierarchy, think about the meaning of zero | Color gradient, diverging color gradient | Size gradient |
 
 | Type | Nominal: | Ordinal: | Interval & Ratio: |
 |------|------|------|------|
