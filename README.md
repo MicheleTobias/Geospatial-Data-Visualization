@@ -32,19 +32,21 @@ Reference: [University of Colorado's Cartographic Communication Site](https://ww
 | Interval | Representation SHOULD imply a hierarchy, no special treatment for zero | Color gradient | Size gradient |
 | Ratio | Representation SHOULD imply a hierarchy, think about the meaning of zero | Color gradient, diverging color gradient | Size gradient |
 
-| Type | Nominal | Ordinal | Interval & Ratio |
+| Type | **Nominal:** unranked categories | **Ordinal:** ranked or ordered categories | **Interval & Ratio:** continuous numbers |
 |------|------|------|------|
-| | unranked categories | ranked or ordered categories | continuous numbers |
 | Point | **Example:** type of business | **Example:** business size - small, medium, or large | **Example:** gross yearly income |
 | |**Colors:** "random" hues with no implied hierarchy | **Color:** gradients | **Color:** gradients |
 | |**Shape:** varied icons | **Size:** gradient in marker size | **Size:** gradient in marker size |
+| Line  | **Example:** | **Example:** | **Example:** |
+| |**Colors:** "random" hues with no implied hierarchy | **Color:** gradients | **Color:** gradients |
+| |**Pattern:** different dashs | **Pattern Density:** dashes at varying distances | **Pattern Density:** dashes at varying distances |
+| | |**Line Weight:** vary line width with attribute value |**Line Weight:** vary line width with attribute value |
+| Polygon  | **Example:** | **Example:** | **Example:** |
+| | | | |
+| | | | |
+| Raster  | **Example:** | **Example:** | **Example:** |
+| | | | |
 
-| Line | | | |
-|  | example: | example: | example: |
-| Polygon | | | |
-|  | example: | example: | example: |
-| Raster | | | |
-|  | example: | example: | example: |
 
 
 
