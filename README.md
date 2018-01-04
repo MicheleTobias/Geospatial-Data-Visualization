@@ -35,9 +35,10 @@ Reference: [University of Colorado's Cartographic Communication Site](https://ww
 | Type | Nominal | Ordinal | Interval & Ratio |
 |------|------|------|------|
 | | unranked categories | ranked or ordered categories | continuous numbers |
-| Point |Colors: "random" hues with no implied hierarchy | Color: gradients | Color: gradients |
-| | Shape: varied icons | Size: gradient in marker size |  Size: gradient in marker size |
-|  | example: type of business | example: business size - small, medium, or large | example: gross yearly income |
+| Point | **Example:** type of business | **Example:** business size - small, medium, or large | **Example:** gross yearly income |
+| |**Colors:** "random" hues with no implied hierarchy | **Color:** gradients | **Color:** gradients |
+| |**Shape:** varied icons | **Size:** gradient in marker size | **Size:** gradient in marker size |
+
 | Line | | | |
 |  | example: | example: | example: |
 | Polygon | | | |
