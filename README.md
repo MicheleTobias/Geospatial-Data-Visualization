@@ -65,10 +65,43 @@ You'll need to download
 1. Watersed Centroids (Points)
 1. Rivers (Lines)
 
-# Load Data into QGIS
+## Load Data into QGIS
 
-# Points
+## Points
 Points represent data that are small relative to the map scale.  They have a location but no other dimension.  Because points are one-dimension (a single location), they are somewhat different than lines and polygons in the way they can be represented.  They are the only geometry that can be intuitively represented with an icon.  Icons or markers in general can vary in size without compromizing the geometry itself (you can't increase the size of a polygon or length of a line without implications to the data). 
+
+### Nominal
+
+### Ordinal
+
+### Interval/Ratio
+
+
+## Lines
+
+### Nominal
+
+### Ordinal
+
+### Interval/Ratio
+
+
+## Polygons
+
+### Nominal
+
+### Ordinal
+
+### Interval/Ratio
+
+
+## Raster
+
+### Nominal
+
+### Ordinal
+
+### Interval/Ratio
 
 
 
