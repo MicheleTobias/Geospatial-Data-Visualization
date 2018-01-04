@@ -68,7 +68,8 @@ You'll need to download
 ## Load Data into QGIS
 
 ## Points
-Points represent data that are small relative to the map scale.  They have a location but no other dimension.  Because points are one-dimension (a single location), they are somewhat different than lines and polygons in the way they can be represented.  They are the only geometry that can be intuitively represented with an icon.  Icons or markers in general can vary in size without compromizing the geometry itself (you can't increase the size of a polygon or length of a line without implications to the data). 
+Points represent data that are small relative to the map scale.  Examples include cities on a map of North America or 
+store locations at County Level  They have a location but no other dimension.  Because points are one-dimension (a single location), they are somewhat different than lines and polygons in the way they can be represented.  They are the only geometry that can be intuitively represented with an icon.  Icons or markers in general can vary in size without compromizing the geometry itself (you can't increase the size of a polygon or length of a line without implications to the data). 
 
 ### Nominal
 
@@ -78,6 +79,7 @@ Points represent data that are small relative to the map scale.  They have a loc
 
 
 ## Lines
+Lines represents items that are linear in nature & are thin relative to the map scale. Length is important but not width.  Examples include roads or rivers.  At large scales, these usually become polygons because the width becomes important as you zoom in.
 
 ### Nominal
 
@@ -87,6 +89,7 @@ Points represent data that are small relative to the map scale.  They have a loc
 
 
 ## Polygons
+Polygons represents items that are large relative to the map scale.  Examples include parks, lakes, or parcels.
 
 ### Nominal
 
@@ -96,6 +99,7 @@ Points represent data that are small relative to the map scale.  They have a loc
 
 
 ## Raster
+Rasters are much better at representing continuous data (ratio/interval data), such as temperature, but can be used to represent discrete data (nominal and ordinal) as well.  It is common, for example, to find land cover data with nominal cover categories in raster format.
 
 ### Nominal
 
