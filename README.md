@@ -31,7 +31,7 @@ Reference: [University of Colorado's Cartographic Communication Site](https://ww
 | |**Color:** "random" hues with no implied hierarchy | **Color:** gradients | **Color:** gradients |
 | |**Shape:** varied icons | **Size:** gradient in marker size | **Size:** gradient in marker size |
 | | | | |
-| Line  | **Example:** | **Example:** | **Example:** |
+| Line  | **Example:** type of road - paved, unpaved, etc. | **Example:** stream order | **Example:** length |
 | |**Color:** "random" hues with no implied hierarchy | **Color:** gradients | **Color:** gradients |
 | |**Pattern:** different dashs | **Pattern Density:** dashes at varying distances | **Pattern Density:** dashes at varying distances |
 | | |**Line Weight:** vary line width with attribute value |**Line Weight:** vary line width with attribute value |
