@@ -44,6 +44,15 @@ Reference: [University of Colorado's Cartographic Communication Site](https://ww
 | |**Color:** "random" hues with no implied hierarchy | **Color:** gradients | **Color:** gradients |
 | | | | |
 
+# Hands On Tutorial
+
+## Data
+You'll need to download
+1. California Counties (optional, background data)
+1. Watershed Boundaries (Polygons)
+1. Watersed Centroids (Points)
+1. Rivers (Lines)
+
 
 
 
