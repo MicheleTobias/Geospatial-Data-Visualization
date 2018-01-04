@@ -32,6 +32,18 @@ Reference: [University of Colorado's Cartographic Communication Site](https://ww
 | Interval | Representation SHOULD imply a hierarchy, no special treatment for zero | Color gradient | Size gradient |
 | Ratio | Representation SHOULD imply a hierarchy, think about the meaning of zero | Color gradient, diverging color gradient | Size gradient |
 
+| Type | Nominal | Ordinal | Interval & Ratio |
+|------|------|------|------|
+| | unranked categories | ranked or ordered categories | continuous numbers |
+| Point | | | |
+|  | example: | example: | example: |
+| Line | | | |
+|  | example: | example: | example: |
+| Polygon | | | |
+|  | example: | example: | example: |
+| Raster | | | |
+|  | example: | example: | example: |
+
 
 
 # Resources:
