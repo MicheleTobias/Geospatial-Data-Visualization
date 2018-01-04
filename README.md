@@ -35,17 +35,22 @@ Reference: [University of Colorado's Cartographic Communication Site](https://ww
 | Type | Nominal: | Ordinal: | Interval & Ratio: |
 |------|------|------|------|
 | | unranked categories | ranked or ordered categories | continuous numbers |
-| Point | Example: type of business | Example: business size - small, medium, or large | Example: gross yearly income |
+| | | | |
+| Point | **Example:** type of business | **Example:** business size - small, medium, or large | **Example:** gross yearly income |
 | |**Color:** "random" hues with no implied hierarchy | **Color:** gradients | **Color:** gradients |
 | |**Shape:** varied icons | **Size:** gradient in marker size | **Size:** gradient in marker size |
+| | | | |
 | Line  | **Example:** | **Example:** | **Example:** |
 | |**Color:** "random" hues with no implied hierarchy | **Color:** gradients | **Color:** gradients |
 | |**Pattern:** different dashs | **Pattern Density:** dashes at varying distances | **Pattern Density:** dashes at varying distances |
 | | |**Line Weight:** vary line width with attribute value |**Line Weight:** vary line width with attribute value |
-| Polygon  | **Example:** | **Example:** | **Example:** |
 | | | | |
+| Polygon  | **Example:** zoning catgeories | **Example:** habitat conditions - good, moderate, or poor | **Example:** area |
+| |**Color:** "random" hues with no implied hierarchy | **Color:** gradients | **Color:** gradients |
+| |**Fill Pattern:** diffrent fills for each type | **Fill Pattern Density:** fill density varies with attribute value | **Fill Pattern Density:** fill density varies with attribute value |
 | | | | |
-| Raster  | **Example:** | **Example:** | **Example:** |
+| Raster  | **Example:** land use/cover | **Example:** fire risk - high, medium, low | **Example:** rainfall totals |
+| |**Color:** "random" hues with no implied hierarchy | **Color:** gradients | **Color:** gradients |
 | | | | |
 
 
