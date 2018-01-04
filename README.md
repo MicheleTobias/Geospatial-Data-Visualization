@@ -25,7 +25,7 @@ Reference: [University of Colorado's Cartographic Communication Site](https://ww
 
 | Type | Nominal: | Ordinal: | Interval & Ratio: |
 |------|------|------|------|
-| | unranked categories | ranked or ordered categories | continuous numbers |
+| | Unranked categories | Ranked or ordered categories | Continuous numbers |
 | | | | |
 | Point | **Example:** type of business | **Example:** business size - small, medium, or large | **Example:** gross yearly income |
 | |**Color:** "random" hues with no implied hierarchy | **Color:** gradients | **Color:** gradients |
@@ -47,7 +47,7 @@ Reference: [University of Colorado's Cartographic Communication Site](https://ww
 
 
 
-# Resources:
+# Additional Resources:
 
 ## Guides & Toolkits
 
