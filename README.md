@@ -76,16 +76,26 @@ Load the workshop data into QGIS: Layer menu -> Add Layer -> Add Vector Layer.  
 
 Optional: Add any other reference data you might find helpful, such as the [California County Boundaries](http://frap.fire.ca.gov/data/frapgisdata-sw-counties_download) or [Natural Earth Data](http://www.naturalearthdata.com/) datasets.
 
+Now order the data in your Layers Panel on the left side of the window so you can see everything - polygons on the bottom, then lines, then points on the top.  Remember that you can grab and drag the items in the Layers Panel to move them up or down in the order.  The order you see is the order the layers appear on the map canvas. (I personally like to think of it like a craft project... big opaque construction paper on the lower levels, stacked up with strings, and stickers.  You could certainly put the paper on top, but you won't see the strings/lines or the stickers/points then.)  Don't worry if the default colors QGIS picked are unattractive.  The rest of this workshop is about styling data.
 
 
 ## Lines
 Lines represents items that are linear in nature & are thin relative to the map scale. Length is important but not width.  Examples include roads or rivers.  At large scales, these usually become polygons because the width becomes important as you zoom in.
 
-In this section, we'll be working with the Flowlines.geojson file.  It's a subset of the NHD Flowlines shapefile and only has lines that intersect with the San Francsisco Bay HUC 4 boundary (otherwise it would be very large).  For this workshop, I've added a few other columns as well to facilitate learning.   
+In this section, we'll be working with the Flowlines.geojson file.  It's a subset of the NHD Flowlines shapefile and only has lines that intersect with the San Francsisco Bay HUC 4 watershed boundary (otherwise it would be too much to deal with today).  For this workshop, I've added a few other columns as well to facilitate learning.   
 
 ### Nominal
+Let's look at the attribute table for the Flowlines data.  Right click on the layer in the Layers Panel and choose Open Attribute Table.  The name column (GNIS_NAME) is one of the easier to understand nominal data columns in this dataset so we'll work with this column for now.  Scroll through the data to get an idea of what kinds of information is in this name column.  It looks like some items are named and others are not.  Some names appear multiple times.
 
-The name column (GNIS_NAME) is one of the easier to understand nominal data columns in this dataset.
+Close the attribute table.
+
+Let's explore this data some more through visualizations.  Right click on the layer in the Layers Panel again, but this time, pick Properties to open the Layer Properties.  There's a lot of options in this particular interface (notice all the "tabs" on the left side of the window?).  Click on the Style tab.
+
+The default style for lines is a single Simple Line of a randomly chosen color (mine is currently hot pink and a little hard on the eyes).  In the Color drop down (mine is hot pink, yours will be whatever color QGIS picked for you) pick "choose color" to open the Select Color dialog or just click in the colored box to open the same dialog.  Tabs across the top of the Select Color dialog give you an array of options for picking a color.  Pick one that you like in any way you like (one fun option is to look up an HTML color that you like from a website and put that into the HTML Notation box... #457a94 is a nice blue...).  Click the Apply button to see the affect on your canvas.
+
+You can make more complicated markers by stacking up different lines.  Let's make our current line rather wide - change the width to 2.0.  Add a symbol layer with the + button below the white box that shows you the line.  It should have added a layer to your line above your wide blue line.  Making sure the new line is selected in the list of line layers, pick a new color.  I chose white.  Change the Pen Style to a Dot Line.  Ok, this style doesn't really work at the scale of the whole watershed, but if you click OK and zoom in to one section, you'll be better able to see the affects.
+
+
 
 
 ### Ordinal
