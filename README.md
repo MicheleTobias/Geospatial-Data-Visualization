@@ -81,11 +81,22 @@ store locations at County Level  They have a location but no other dimension.  B
 ## Lines
 Lines represents items that are linear in nature & are thin relative to the map scale. Length is important but not width.  Examples include roads or rivers.  At large scales, these usually become polygons because the width becomes important as you zoom in.
 
+In this section, we'll be working with the Flowlines.geojson file.  It's a subset of the NHD Flowlines shapefile and only has lines that intersect with the San Francsisco Bay HUC 4 boundary (otherwise it would be very large).  For this workshop, I've added a few other columns as well to facilitate learning.   
+
 ### Nominal
+
+The name column (GNIS_NAME) is one of the easier to understand nominal data columns in this dataset.
+
 
 ### Ordinal
 
+Most important to understanding what's here is knowing what the FCODE column means.  The metadata for this column is available on the [USGS' FCODE metadata page](https://nhd.usgs.gov/userGuide/Robohelpfiles/NHD_User_Guide/Feature_Catalog/Hydrography_Dataset/Complete_FCode_List.htm).  You'll notice that this particular column is Nominal Data, or categories.
+
+Wetlands Professional Services offers a clear explanation of [intermittent vs. ephemeral streams](http://www.wetlandsprofessional.com/intermittent-and-ephemeral-streams.html), as does the [USGS Water Basics Glossary](https://water.usgs.gov/water-basics_glossary.html).
+
 ### Interval/Ratio
+
+Length_Meters column
 
 
 ## Polygons
