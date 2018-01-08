@@ -67,15 +67,15 @@ You'll need to download
 
 ## Load Data into QGIS
 
-## Points
-Points represent data that are small relative to the map scale.  Examples include cities on a map of North America or 
-store locations at County Level  They have a location but no other dimension.  Because points are one-dimension (a single location), they are somewhat different than lines and polygons in the way they can be represented.  They are the only geometry that can be intuitively represented with an icon.  Icons or markers in general can vary in size without compromizing the geometry itself (you can't increase the size of a polygon or length of a line without implications to the data). 
+Open QGIS (2.14 or 2.18... yes, this is going to need to be re-written for QGIS 3.0 soon... volunteers to help, please contact Michele).  Start a new project by either clicking on the white rectangle icon (with the corner turned down) or selecting "new" under the Project menu.  You now should have a blank map canvas ready to go.
 
-### Nominal
+Load the workshop data into QGIS: Layer menu -> Add Layer -> Add Vector Layer.  Alternatively, you can use the Add Vector Layer button on the toolbar.  Add the following data:
+* Flowlines.geojson - rivers and other linear water structures
+* WBDHU8_SF.geojson - watershed boundary polygons for the San Fransisco Bay watershed
+* WBDHU8_Points_SF.geojson - centroids for the watershed boundaries
 
-### Ordinal
+Optional: Add any other reference data you might find helpful, such as the [California County Boundaries](http://frap.fire.ca.gov/data/frapgisdata-sw-counties_download) or [Natural Earth Data](http://www.naturalearthdata.com/) datasets.
 
-### Interval/Ratio
 
 
 ## Lines
@@ -102,11 +102,37 @@ Length_Meters column
 ## Polygons
 Polygons represents items that are large relative to the map scale.  Examples include parks, lakes, or parcels.
 
+For polygon data, we'll mainly be working with the HUC 8 watershed boundary data (WBDHU8.geojson).
+
 ### Nominal
+
+NAME column
 
 ### Ordinal
 
+Rank_Acres
+
 ### Interval/Ratio
+
+AREAACRES or AREASQKM
+
+## Points
+Points represent data that are small relative to the map scale.  Examples include cities on a map of North America or 
+store locations at County Level  They have a location but no other dimension.  Because points are one-dimension (a single location), they are somewhat different than lines and polygons in the way they can be represented.  They are the only geometry that can be intuitively represented with an icon.  Icons or markers in general can vary in size without compromizing the geometry itself (you can't increase the size of a polygon or length of a line without implications to the data). 
+
+To learn about points, we will use the centroids of the watershed polygons (WBDHU8_Points_SF).  The data is the same, but rather than working with polygons, we will be working with points that are the center of the original polygons.  Points allow us a completely different set of ways to visualiz the data.
+
+### Nominal
+
+NAME column
+
+### Ordinal
+
+Rank_Acres
+
+### Interval/Ratio
+
+AREAACRES or AREASQKM
 
 
 ## Raster
