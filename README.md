@@ -169,7 +169,7 @@ Varying the line width could looks like this:
 
 ### Interval/Ratio
 
-Now, if we want to explore stream segments by their lenght, we'll be working with Ratio Data.  Interval Data is dealt with in very similar ways, so we'll skip that for now.  The length of the stream segments in meters is stored in the Length_Meters column.
+Now, if we want to explore stream segments by their length, we'll be working with Ratio Data.  Interval Data is dealt with in very similar ways, so we'll skip that for now.  The length of the stream segments in meters is stored in the Length_Meters column.
 
 Open the Layer Properties for the Flowlines data once again and go back to the Style tab. (You've done this 3 times now, which pretty much makes you a pro!)
 
@@ -192,6 +192,19 @@ Click Apply to see how this looks.  Yikes! Almost everything appears to have fal
 Click back to the Classes tab instead of the Histogram.  Pick Natural Breaks (Jenks) from the Mode drop-down.  The classes should automatically update.  Hit the Apply button to see what it did.  This looks better to help us see the variation in the data.
 
 ![alt text](https://github.com/MicheleTobias/Geospatial-Data-Visualization/blob/master/images/Line_Ratio_NaturalBreaks.PNG "Map showing the results of the Natural Breaks classification - more color variation")
+
+**Bonus**
+The example we've been working through shows all the line segments, regardless of whether they are streams or irrigation ditches.  What if we just want to show the streams?
+
+Back in the Layer Properties' Style Tab, notice that to the right of the Column drop-down is a button with a Greek epsilon (a scrip E).  Click the Epsilon button to open the Expression Dialog.  (This looks pretty familiar by now, right?)
+
+In this case, we will need to use an *If Statement* to tell QGIS that if a line has a certain FTYPE (460), we want it displayed, but if it has a different FTYPE, we don't want to see it.
+
+Expand the Conditionals list (in the middle of the window).  Click once on "if" to display an explanation of what this function does and how to use it.  *If* takes three arguments: the condition we want to consider (the FTYPE should be 460), what to display if that condition is true (the Length_Meters value from the attribute table), and finally what to do if the condition isn't true (display nothing... make it null).
+
+Now that we know what *if* does, let's build our query.  Delete any text in the Expression box.  Double click *if* in the Conditionals list to send it over to the Expressions box.  Expand the Fields and Values list, and double clikc FTYPE to send it over.  Type in = 460, then a comma and a space.  That takes care of the conditional statement.  Now let's double click Lenght_Meters to send it over to the Expressions box.  This is what we want to display if the condition is true.  Add a comma and a space to the query text.  Finally, we need to tell it what to do if the condition is false.  Type NULL and close the parenthese.  Your query should look like this:  if(  "FTYPE" = 460, Length_Meters, NULL)  Check the below the Expressions Box to make sure there's no errors.  Then click OK in this dialog, and Apply in the Layer Properties.
+
+![alt text](https://github.com/MicheleTobias/Geospatial-Data-Visualization/blob/master/images/Line_Ratio_NaturalBreaks_JustStreams.PNG "Map showing the results of the Natural Breaks classification but with just the streams")
 
 
 ## Polygons
