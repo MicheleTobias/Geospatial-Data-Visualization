@@ -167,14 +167,31 @@ Varying the line width could looks like this:
 ![alt text](https://github.com/MicheleTobias/Geospatial-Data-Visualization/blob/master/images/Line_Ordinal_VaryLineWeight.PNG "Lines of the same shade of blue but different line weights")
 
 
-
-
-
-
-
 ### Interval/Ratio
 
-Length_Meters column
+Now, if we want to explore stream segments by their lenght, we'll be working with Ratio Data.  Interval Data is dealt with in very similar ways, so we'll skip that for now.  The length of the stream segments in meters is stored in the Length_Meters column.
+
+Open the Layer Properties for the Flowlines data once again and go back to the Style tab. (You've done this 3 times now, which pretty much makes you a pro!)
+
+Change the drop-down at the top to Graduated.  (See! I told you we'd get there!)  Looking at this new dialog, you might start to see some similarities to the other interfaces we've worked with so far.
+
+From the Column drop-down, pick Length_Meters.
+
+Set the Color Ramp to Blues.  Note that you can chance the classification method with the Mode drop-down under the white box on the left and the number of classes on the right.  Let's leave the Mode as Equal Interval and the number of Classes as 5.  For each dataset you work with, you will want to think about which options make the most sense for your data.
+
+![alt text](https://github.com/MicheleTobias/Geospatial-Data-Visualization/blob/master/images/Line_Ratio_Interface_EqualInterval.PNG "Interface showing Equal Interval classes")
+
+Click Classify.  Notice that the color ramp has low values in a light color and higher values in a darker color.  This makes sense for our data, but if you needed the ramp reversed, click the Invert check box near the Color Ramp selector.  
+
+![alt text](https://github.com/MicheleTobias/Geospatial-Data-Visualization/blob/master/images/Line_Ratio_EqualInterval.PNG "Map showing the results of the equal interval classification - mostly one color")
+
+Click Apply to see how this looks.  Yikes! Almost everything appears to have fallen in the first category.  Let's investigate.  Click the Histogram tab just above the box showing the classes.  If it appears to be blank, click the Load Values button.  It seems that indeed most of our lengths are generally small with a few larger ones.  Maybe a new classification scheme is in order.
+
+![alt text](https://github.com/MicheleTobias/Geospatial-Data-Visualization/blob/master/images/Line_Ratio_Interface_Histogram.PNG "Histogram interface")
+
+Click back to the Classes tab instead of the Histogram.  Pick Natural Breaks (Jenks) from the Mode drop-down.  The classes should automatically update.  Hit the Apply button to see what it did.  This looks better to help us see the variation in the data.
+
+![alt text](https://github.com/MicheleTobias/Geospatial-Data-Visualization/blob/master/images/Line_Ratio_NaturalBreaks.PNG "Map showing the results of the Natural Breaks classification - more color variation")
 
 
 ## Polygons
