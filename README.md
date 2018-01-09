@@ -226,11 +226,13 @@ We probably don't want to add these to the legend (referring back and forth woul
 * Click the Apply button as you go to see what your changes look like and when you're happy, you can click OK.
 
 Here's one possible version of this map:
+
 ![alt text](https://github.com/MicheleTobias/Geospatial-Data-Visualization/blob/master/images/Polygon_Nominal_Filled.PNG "Map showing watersheds boundaries filled with a different color for each polygon")
 
 Continue to explore options in the Style interface.  Change up the Symbol to see what kinds of effects you can generate.  One option is to apply the colors just to the outlines of the polygons.  Or add a semi-transparent fill, which could be useful for showing data underneath like a terrain model.
 
 Explore options to create new effects:
+
 ![alt text](https://github.com/MicheleTobias/Geospatial-Data-Visualization/blob/master/images/Polygon_Nominal_Filled_Transparency.PNG "Map showing watersheds boundaries filled with a different color for each polygon and line")
 
 ### Ordinal
