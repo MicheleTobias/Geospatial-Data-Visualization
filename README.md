@@ -95,6 +95,12 @@ The default style for lines is a single Simple Line of a randomly chosen color (
 
 You can make more complicated markers by stacking up different lines.  Let's make our current line rather wide - change the width to 2.0.  Add a symbol layer with the + button below the white box that shows you the line.  It should have added a layer to your line above your wide blue line.  Making sure the new line is selected in the list of line layers, pick a new color.  I chose white.  Change the Pen Style to a Dot Line.  Ok, this style doesn't really work at the scale of the whole watershed, but if you click OK and zoom in to one section, you'll be better able to see the affects.
 
+![alt text](https://github.com/MicheleTobias/Geospatial-Data-Visualization/blob/master/images/Line_SingleSymbol.PNG "Single symbol stacked line marker for rivers")
+
+So we've seen that having just one marker type sometimes doesn't help us understand our data very well.
+
+
+
 
 
 
