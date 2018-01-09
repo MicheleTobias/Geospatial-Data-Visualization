@@ -82,7 +82,7 @@ Now order the data in your Layers Panel on the left side of the window so you ca
 ## Lines
 Lines represents items that are linear in nature & are thin relative to the map scale. Length is important but not width.  Examples include roads or rivers.  At large scales, these usually become polygons because the width becomes important as you zoom in.
 
-In this section, we'll be working with the Flowlines.geojson file.  It's a subset of the NHD Flowlines shapefile and only has lines that intersect with the San Francsisco Bay HUC 4 watershed boundary (otherwise it would be too much to deal with today).  For this workshop, I've added a few other columns as well to facilitate learning.   
+In this section, we'll be working with the Flowlines.geojson file which contains things like streams, pipelines, canals, and other linear entities that carry water from one place to another.  It's a subset of the NHD Flowlines shapefile and only has lines that intersect with the San Francsisco Bay HUC 4 watershed boundary (otherwise it would be too much to deal with today).  For this workshop, I've added a few other columns as well to facilitate learning.   
 
 ### Nominal
 Let's look at the attribute table for the Flowlines data.  Right click on the layer in the Layers Panel and choose Open Attribute Table.  The name column (GNIS_NAME) is one of the easier to understand nominal data columns in this dataset so we'll work with this column for now.  Scroll through the data to get an idea of what kinds of information is in this name column.  It looks like some items are named and others are not.  Some names appear multiple times.
