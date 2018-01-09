@@ -210,11 +210,28 @@ Now that we know what *if* does, let's build our query.  Delete any text in the 
 ## Polygons
 Polygons represents items that are large relative to the map scale.  Examples include parks, lakes, or parcels.
 
-For polygon data, we'll mainly be working with the HUC 8 watershed boundary data (WBDHU8.geojson).
+For polygon data, we'll mainly be working with the HUC 8 watershed boundary data (WBDHU8.geojson). You can turn off or remove the flowlines dataset.  We won't need it for the rest of the tutorial.
+
+Open the attribute table for your watershed polygon layer.  You may not be certain what every column means, but you can get an idea of the kind of data available and what might be useful... name, area and length columns, ranking of watershed size...  and what type of data each column holds.  When you're done, close the attribute table.
 
 ### Nominal
 
-NAME column
+Let's start exploring how Nominal Data works with polygons.  Open up the Layer Properties and go to the Style tab.  Categorize your watershed boundaries by the NAME column.  Feel free to uncheck the blank category (usually reserved for "other").  What's the best color scheme to use?  Because this data is Nominal, we don't want to imply a relationship, but rather that each polygon is simply different from the others.  [Color Brewer](http://colorbrewer2.org) is a great place to get ideas.  Choose 6 classes, then pick the Qualitative radio button.  Because of the nature of the data, we are likely to display these polygons as relatively large compared to the other map items, I would encourage you to use pale (unsaturated) rather than saturated colors.
+
+We probably don't want to add these to the legend (referring back and forth would be annoying to the reader), but we want the reader to know what they are looking at, so let's quickly label our watersheds with text.
+* Click on the Labels tab in the Layer Properties.
+* On the top drop-down menu, pick "Show labels for this layer".
+* For "Label with", pick the NAME column.
+* Explore the other options available, picking what you like (text on maps could be another complete workshop for later).
+* Click the Apply button as you go to see what your changes look like and when you're happy, you can click OK.
+
+Here's one possible version of this map:
+![alt text](https://github.com/MicheleTobias/Geospatial-Data-Visualization/blob/master/images/Polygon_Nominal_Filled.PNG "Map showing watersheds boundaries filled with a different color for each polygon")
+
+Continue to explore options in the Style interface.  Change up the Symbol to see what kinds of effects you can generate.  One option is to apply the colors just to the outlines of the polygons.  Or add a semi-transparent fill, which could be useful for showing data underneath like a terrain model.
+
+Explore options to create new effects:
+![alt text](https://github.com/MicheleTobias/Geospatial-Data-Visualization/blob/master/images/Polygon_Nominal_Filled_Transparency.PNG "Map showing watersheds boundaries filled with a different color for each polygon and line")
 
 ### Ordinal
 
