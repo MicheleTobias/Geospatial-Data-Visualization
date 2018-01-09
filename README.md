@@ -148,17 +148,23 @@ Let's make start by showing just the perennial streams.
 * Now adjust the color of your line to represent a stream better than whatever the default color was (why is mine pink again?).  I'm going to pick a dark blue and make the pen width a little thicker... let's say 0.5 to start.
 * Click OK to close the Edit Rule Dialog, then Apply in the Layer Properties to see how our new rule looks on the map canvas.
 
-![alt text](https://github.com/MicheleTobias/Geospatial-Data-Visualization/blob/master/images/Line_Ordinal_PerennialSteams.PNG "Choppy lines representing river segments")
+![alt text](https://github.com/MicheleTobias/Geospatial-Data-Visualization/blob/master/images/Line_Ordinal_PerennialStreams.PNG "Choppy lines representing river segments")
 
 Looks good, but let's add the other two categories.  It's the same process as before but change the FCODE number to match the stream type, and pick a different color to represent each stream type.  Need help picking colors?  Pop over to the [Color Brewer website](http://colorbrewer2.org) for assistance.  Those HEX codes can be used in the QGIS color picking dialog HTML Notation box to get the exact color.  I'm using a dark blue for perennial, a medium blue for intermittent, and a light blue for ephemeral.
 
+Your rules should look roughly like this:
+
 ![alt text](https://github.com/MicheleTobias/Geospatial-Data-Visualization/blob/master/images/Line_Ordinal_Solid_LayerProperties.PNG "Layer Properties dialog window showing the three rules to make the three categories")
+
+The results of the rules shown above:
 
 ![alt text](https://github.com/MicheleTobias/Geospatial-Data-Visualization/blob/master/images/Line_Ordinal_SolidStreams.PNG "Three different kinds of streams shown with three shades of blue")
 
 The example we just worked though used solid colors to style each category of lines.  But you have other options!  Try picking one shade of blue for all the lines, but vary the pattern - solid, dashed, and dotted.  Or keep all three lines solid but vary the width.  Which one tells the story better for you?  What would you change about your choices if you change your map scale (zoom in or out)?
 
-![alt text](https://github.com/MicheleTobias/Geospatial-Data-Visualization/blob/master/images/Line_Ordinal_VaryLineWeight.PNG "Three different kinds of streams shown with three shades of blue")
+Varying the line width could looks like this:
+
+![alt text](https://github.com/MicheleTobias/Geospatial-Data-Visualization/blob/master/images/Line_Ordinal_VaryLineWeight.PNG "Lines of the same shade of blue but different line weights")
 
 
 
