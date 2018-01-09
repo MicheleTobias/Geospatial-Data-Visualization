@@ -121,15 +121,50 @@ Now let's make those named streams stand out a little more with some visual hier
 
 The exercise we just worked through is an excellent example of how scale changes how you represent data.  Zooming in on this data to roughly city-level scale, this example makes sense, but if I try to use this same visualization at the scale of the entire dataset or even the state, it quickly looses it's ability to communicate well (in fact, it starts to look like party streamers, which isn't what we want).
 
-
+![alt text](https://github.com/MicheleTobias/Geospatial-Data-Visualization/blob/master/images/Line_NominalData_ZoomOut.PNG "Nominal line data zoomed out to show that at a smaller map scale, the lines no longer look like rivers")
 
 
 
 ### Ordinal
 
-Most important to understanding what's here is knowing what the FCODE column means.  The metadata for this column is available on the [USGS' FCODE metadata page](https://nhd.usgs.gov/userGuide/Robohelpfiles/NHD_User_Guide/Feature_Catalog/Hydrography_Dataset/Complete_FCode_List.htm).  You'll notice that this particular column is Nominal Data, or categories.
+The FCODE column classifies each line segment as different kinds of linear water bodies like rivers or canals.  The metadata for this column is available on the [USGS' FCODE metadata page](https://nhd.usgs.gov/userGuide/Robohelpfiles/NHD_User_Guide/Feature_Catalog/Hydrography_Dataset/Complete_FCode_List.htm).  
 
-Wetlands Professional Services offers a clear explanation of [intermittent vs. ephemeral streams](http://www.wetlandsprofessional.com/intermittent-and-ephemeral-streams.html), as does the [USGS Water Basics Glossary](https://water.usgs.gov/water-basics_glossary.html).
+Let's focus on the Rivers/Streams line type (FTYPE 460 or FCODE 46006, 46003, and 46007).  This subset of the data is Ordinal Data, or categories that imply a hierarchy.  Perennial streams (FCODE 46006) have water all year, while Intermittend streams (FCODE 46003) have water some of the year, and Ephemeral streams (FCODE 46007) have water only occasionally.  For a deeper understanding of the difference between these kinds of streams, Wetlands Professional Services offers a clear explanation of [intermittent vs. ephemeral streams](http://www.wetlandsprofessional.com/intermittent-and-ephemeral-streams.html), as does the [USGS Water Basics Glossary](https://water.usgs.gov/water-basics_glossary.html).
+
+But we know that our dataset has more than just the 3 kinds of streams we are interested in.  How do we isolate just the data we want to see?  As you saw in the Line Nominal Data exercise above, we could categorize the data based on FCODE, and then work with the way each category is styled to highlight just the rivers/streams.  But let's look at a different way: Rule-Based Classification. (For those of you who saw the Graduated Classification option on the menu and thought "What about that one? It's for visualizing hierarchy in data, right?" I'd respond that you're definitely thinking like a cartographer, but the Graduated option is for numerical data where the numbers can be compared as numbers.  Our numbers really aren't numbers but categories and while we know perennial > intermittend > ephemeral, their FCODEs don't work that way. 46006 > 46003 but 46003 !> 46007.  We'll use Graduated later, don't worrry!)
+
+Open up the Layer Properties for your Flowlines data again and go to the Style tab.  From the drop-down menu at the top, choose Rule-based.
+
+Let's make start by showing just the perennial streams.  
+* Add a rule by clicking the green + button just below the big white box to open the Edit Rule dialog.
+* In the Label box, type Perennial Streams so we can remember what this rule does
+* In the Filter section, click the ... button to pen the Expression String Builder dialog.  This dialog works in the same way as the Expression Builder.  We'll write an expression that, if true for a given line segment, will show the line.  If it's not true for a particular segment, it won't display it.
+* Expand the Fields and Values list (in the middle section of the dialog) by clicking the arrow next to it.
+* Double click the FCODE field to add it to the expression box on the left.
+* Click the = button above the expression box (or just type it in... QGIS isn't as picky as ArcGIS about this)
+* Then type 46006
+* Your expression should say "FCODE"  =  46006  and if it's a valid expression, the statement below the expression box will say "Output preview: 0"... 0 meaning there are no errors, not 0 matches.  If there's an error, it will tell you so.
+* Click OK to close the Expression String Builder Dialog and go back to the Edit Rule dialog.  Notice that now there's text in the Filter box.
+* Now adjust the color of your line to represent a stream better than whatever the default color was (why is mine pink again?).  I'm going to pick a dark blue and make the pen width a little thicker... let's say 0.5 to start.
+* Click OK to close the Edit Rule Dialog, then Apply in the Layer Properties to see how our new rule looks on the map canvas.
+
+![alt text](https://github.com/MicheleTobias/Geospatial-Data-Visualization/blob/master/images/Line_Ordinal_PerennialSteams.PNG "Choppy lines representing river segments")
+
+Looks good, but let's add the other two categories.  It's the same process as before but change the FCODE number to match the stream type, and pick a different color to represent each stream type.  Need help picking colors?  Pop over to the [Color Brewer website](http://colorbrewer2.org) for assistance.  Those HEX codes can be used in the QGIS color picking dialog HTML Notation box to get the exact color.  I'm using a dark blue for perennial, a medium blue for intermittent, and a light blue for ephemeral.
+
+![alt text](https://github.com/MicheleTobias/Geospatial-Data-Visualization/blob/master/images/Line_Ordinal_Solid_LayerProperties.PNG "Layer Properties dialog window showing the three rules to make the three categories")
+
+![alt text](https://github.com/MicheleTobias/Geospatial-Data-Visualization/blob/master/images/Line_Ordinal_SolidStreams.PNG "Three different kinds of streams shown with three shades of blue")
+
+The example we just worked though used solid colors to style each category of lines.  But you have other options!  Try picking one shade of blue for all the lines, but vary the pattern - solid, dashed, and dotted.  Or keep all three lines solid but vary the width.  Which one tells the story better for you?  What would you change about your choices if you change your map scale (zoom in or out)?
+
+![alt text](https://github.com/MicheleTobias/Geospatial-Data-Visualization/blob/master/images/Line_Ordinal_VaryLineWeight.PNG "Three different kinds of streams shown with three shades of blue")
+
+
+
+
+
+
 
 ### Interval/Ratio
 
