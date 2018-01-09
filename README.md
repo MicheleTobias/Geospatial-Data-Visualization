@@ -89,7 +89,13 @@ Let's look at the attribute table for the Flowlines data.  Right click on the la
 
 Close the attribute table.
 
-Let's explore this data some more through visualizations.  Right click on the layer in the Layers Panel again, but this time, pick Properties to open the Layer Properties.  There's a lot of options in this particular interface (notice all the "tabs" on the left side of the window?).  Click on the Style tab.
+Let's explore this data some more through visualizations.  
+
+#### Single Sybol
+
+We'll start with a single symbol for all the lines to get familiar with this interface.
+
+Right click on the layer in the Layers Panel again, but this time, pick Properties to open the Layer Properties.  There's a lot of options in this particular interface (notice all the "tabs" on the left side of the window?).  Click on the Style tab.
 
 The default style for lines is a single Simple Line of a randomly chosen color (mine is currently hot pink and a little hard on the eyes).  In the Color drop down (mine is hot pink, yours will be whatever color QGIS picked for you) pick "choose color" to open the Select Color dialog or just click in the colored box to open the same dialog.  Tabs across the top of the Select Color dialog give you an array of options for picking a color.  Pick one that you like in any way you like (one fun option is to look up an HTML color that you like from a website and put that into the HTML Notation box... #457a94 is a nice blue...).  Click the Apply button to see the affect on your canvas.
 
@@ -99,6 +105,21 @@ You can make more complicated markers by stacking up different lines.  Let's mak
 
 So we've seen that having just one marker type sometimes doesn't help us understand our data very well.
 
+#### By Name
+
+Open the Layer Properties for your Flowlines layer again and back to the Style tab.
+
+From the drop-down menu at the top of the menu that currently says "single symbol", pick "Categorized".  This will erase the syle we made prviously, but that's ok.
+
+From the Column drop-down, pick GNIS_NAME, which has the name of the water body.  For the Color Ramp, pick "Random Colors".  We don't want to imply that there is any hierarchical relationship between the streams.  Click Classify under the big white box to show all the categories.  Click Apply to see what this looks like.  You may want to zoom in to one area.
+
+In mine I'm noticing there are a lot of hot pink lines (Hey, QGIS random color generator, what's up with all the pink?).  If I scroll down to the bottom of my list of symbols, I can see that the unnammed (blank) streams were assigned to a shade of pink.  I'd like to change this.  Double click on the line symbol to open the Symbol Selector dialog.  Because these are unnamed, I want them to be gray. This dialog works in a very similar way to the dialog we worked with earlier. Pick your new color, then click OK in this dialog.  In the Layer Properties dialog, click Apply to see how that changed.  Ok! Now I can easily see what's named and what's not and also which line segments belong to the same river or stream.
+
+Now let's make those named streams stand out a little more with some visual hierarchy.  In the Layer Properties, you've seen that you can change any of the symbols one at a time.  But we have a lot of named streams and I would guess you don't want to change each of these.  We can change many or all of them at once.  In the list of streams, single click on the first entry to highlight it.  Scroll down to the bottom of the list.  Hold down the Shift key and click on the last **named** creek (not the blank entry) to highlight all of the named creeks. Right click on any of the highlighted names, and select "Change Width".  Change the number to 0.50 and click OK.  Click Apply in the Layer Properties dialog to see how that changed.
+
+![alt text](https://github.com/MicheleTobias/Geospatial-Data-Visualization/blob/master/images/Line_NominalData.PNG "Nominal line data")
+
+The exercise we just worked through is an excellent example of how scale changes how you represent data.  Zooming in on this data to roughly city-level scale, this example makes sense, but if I try to use this same visualization at the scale of the entire dataset or even the state, it quickly looses it's ability to communicate well (in fact, it starts to look like party streamers, which isn't what we want).
 
 
 
