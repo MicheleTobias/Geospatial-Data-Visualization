@@ -16,8 +16,8 @@ Understanding what type of data you are working with is important.  Where the da
 |------|------|------|
 | Nominal | Categories | Land Use Type: agriculture, industrial, residential, etc. |
 | Ordinal | Hierarchical Categories | Business Size: small, medium, large |
-| Interval | Numbers in which zero has no real meaning, relative distances between numbers has meaning, but ratios between numbers does not make sense | Farenheit temperature measurements |
-| Ratio | Numbers witha set zero, ratios between numbers make sense | Weight of harvested biomass |
+| Interval | Numbers in which zero has no real meaning, relative distances between numbers has meaning, but ratios between numbers does not make sense | Fahrenheit temperature measurements |
+| Ratio | Numbers with a set zero, ratios between numbers make sense | Weight of harvested biomass |
 
 Reference: [University of Colorado's Cartographic Communication Site](https://www.colorado.edu/geography/gcraft/notes/cartocom/cartocom_f.html)
 
@@ -33,12 +33,12 @@ Reference: [University of Colorado's Cartographic Communication Site](https://ww
 | | | | |
 | Line  | **Example:** type of road - paved, unpaved, etc. | **Example:** stream order | **Example:** length |
 | |**Color:** "random" hues with no implied hierarchy | **Color:** gradients | **Color:** gradients |
-| |**Pattern:** different dashs | **Pattern Density:** dashes at varying distances | **Pattern Density:** dashes at varying distances |
+| |**Pattern:** different dashes | **Pattern Density:** dashes at varying distances | **Pattern Density:** dashes at varying distances |
 | | |**Line Weight:** vary line width with attribute value |**Line Weight:** vary line width with attribute value |
 | | | | |
-| Polygon  | **Example:** zoning catgeories | **Example:** habitat conditions - good, moderate, or poor | **Example:** area |
+| Polygon  | **Example:** zoning categories | **Example:** habitat conditions - good, moderate, or poor | **Example:** area |
 | |**Color:** "random" hues with no implied hierarchy | **Color:** gradients | **Color:** gradients |
-| |**Fill Pattern:** diffrent fills for each type | **Fill Pattern Density:** fill density varies with attribute value | **Fill Pattern Density:** fill density varies with attribute value |
+| |**Fill Pattern:** different fills for each type | **Fill Pattern Density:** fill density varies with attribute value | **Fill Pattern Density:** fill density varies with attribute value |
 | | | | |
 | Raster  | **Example:** land use/cover | **Example:** fire risk - high, medium, low | **Example:** rainfall totals |
 | |**Color:** "random" hues with no implied hierarchy | **Color:** gradients | **Color:** gradients |
@@ -62,7 +62,7 @@ How does your representation change with scale?  The campus probably shifted fro
 You'll need to download
 1. California Counties (optional, background data)
 1. Watershed Boundaries (Polygons)
-1. Watersed Centroids (Points)
+1. Watershed Centroids (Points)
 1. Rivers (Lines)
 
 ## Load Data into QGIS
@@ -71,7 +71,7 @@ Open QGIS (2.14 or 2.18... yes, this is going to need to be re-written for QGIS 
 
 Load the workshop data into QGIS: Layer menu -> Add Layer -> Add Vector Layer.  Alternatively, you can use the Add Vector Layer button on the toolbar.  Add the following data:
 * Flowlines.geojson - rivers and other linear water structures
-* WBDHU8_SF.geojson - watershed boundary polygons for the San Fransisco Bay watershed
+* WBDHU8_SF.geojson - watershed boundary polygons for the San Francisco Bay watershed
 * WBDHU8_Points_SF.geojson - centroids for the watershed boundaries
 
 Optional: Add any other reference data you might find helpful, such as the [California County Boundaries](http://frap.fire.ca.gov/data/frapgisdata-sw-counties_download) or [Natural Earth Data](http://www.naturalearthdata.com/) datasets.
@@ -82,7 +82,7 @@ Now order the data in your Layers Panel on the left side of the window so you ca
 ## Lines
 Lines represents items that are linear in nature & are thin relative to the map scale. Length is important but not width.  Examples include roads or rivers.  At large scales, these usually become polygons because the width becomes important as you zoom in.
 
-In this section, we'll be working with the Flowlines.geojson file which contains things like streams, pipelines, canals, and other linear entities that carry water from one place to another.  It's a subset of the NHD Flowlines shapefile and only has lines that intersect with the San Francsisco Bay HUC 4 watershed boundary (otherwise it would be too much to deal with today).  For this workshop, I've added a few other columns as well to facilitate learning.   
+In this section, we'll be working with the Flowlines.geojson file which contains things like streams, pipelines, canals, and other linear entities that carry water from one place to another.  It's a subset of the NHD Flowlines shapefile and only has lines that intersect with the San Francisco Bay HUC 4 watershed boundary (otherwise it would be too much to deal with today).  For this workshop, I've added a few other columns as well to facilitate learning.   
 
 ### Nominal
 Let's look at the attribute table for the Flowlines data.  Right click on the layer in the Layers Panel and choose Open Attribute Table.  The name column (GNIS_NAME) is one of the easier to understand nominal data columns in this dataset so we'll work with this column for now.  Scroll through the data to get an idea of what kinds of information is in this name column.  It looks like some items are named and others are not.  Some names appear multiple times.
@@ -97,7 +97,7 @@ We'll start with a single symbol for all the lines to get familiar with this int
 
 Right click on the layer in the Layers Panel again, but this time, pick Properties to open the Layer Properties.  There's a lot of options in this particular interface (notice all the "tabs" on the left side of the window?).  Click on the Style tab.
 
-The default style for lines is a single Simple Line of a randomly chosen color (mine is currently hot pink and a little hard on the eyes).  In the Color drop down (mine is hot pink, yours will be whatever color QGIS picked for you) pick "choose color" to open the Select Color dialog or just click in the colored box to open the same dialog.  Tabs across the top of the Select Color dialog give you an array of options for picking a color.  Pick one that you like in any way you like (one fun option is to look up an HTML color that you like from a website and put that into the HTML Notation box... #457a94 is a nice blue...).  Click the Apply button to see the affect on your canvas.
+The default style for lines is a single Simple Line of a randomly chosen color (mine is currently hot pink and a little hard on the eyes).  In the Color drop down (mine is hot pink, yours will be whatever color QGIS picked for you) pick "choose color" to open the Select Color dialog or just click in the colored box to open the same dialog.  Tabs across the top of the Select Color dialog give you an array of options for picking a color.  Pick one that you like in any way you like (one fun option is to look up an HTML color that you like from a website and put that into the HTML Notation box... #457a94 is a nice blue...).  Click the Apply button to see the effect on your canvas.
 
 You can make more complicated markers by stacking up different lines.  Let's make our current line rather wide - change the width to 2.0.  Add a symbol layer with the + button below the white box that shows you the line.  It should have added a layer to your line above your wide blue line.  Making sure the new line is selected in the list of line layers, pick a new color.  I chose white.  Change the Pen Style to a Dot Line.  Ok, this style doesn't really work at the scale of the whole watershed, but if you click OK and zoom in to one section, you'll be better able to see the affects.
 
@@ -109,17 +109,17 @@ So we've seen that having just one marker type sometimes doesn't help us underst
 
 Open the Layer Properties for your Flowlines layer again and back to the Style tab.
 
-From the drop-down menu at the top of the menu that currently says "single symbol", pick "Categorized".  This will erase the syle we made prviously, but that's ok.
+From the drop-down menu at the top of the menu that currently says "single symbol", pick "Categorized".  This will erase the style we made previously, but that's ok.
 
 From the Column drop-down, pick GNIS_NAME, which has the name of the water body.  For the Color Ramp, pick "Random Colors".  We don't want to imply that there is any hierarchical relationship between the streams.  Click Classify under the big white box to show all the categories.  Click Apply to see what this looks like.  You may want to zoom in to one area.
 
-In mine I'm noticing there are a lot of hot pink lines (Hey, QGIS random color generator, what's up with all the pink?).  If I scroll down to the bottom of my list of symbols, I can see that the unnammed (blank) streams were assigned to a shade of pink.  I'd like to change this.  Double click on the line symbol to open the Symbol Selector dialog.  Because these are unnamed, I want them to be gray. This dialog works in a very similar way to the dialog we worked with earlier. Pick your new color, then click OK in this dialog.  In the Layer Properties dialog, click Apply to see how that changed.  Ok! Now I can easily see what's named and what's not and also which line segments belong to the same river or stream.
+In mine I'm noticing there are a lot of hot pink lines (Hey, QGIS random color generator, what's up with all the pink?).  If I scroll down to the bottom of my list of symbols, I can see that the unnamed (blank) streams were assigned to a shade of pink.  I'd like to change this.  Double click on the line symbol to open the Symbol Selector dialog.  Because these are unnamed, I want them to be gray. This dialog works in a very similar way to the dialog we worked with earlier. Pick your new color, then click OK in this dialog.  In the Layer Properties dialog, click Apply to see how that changed.  Ok! Now I can easily see what's named and what's not and also which line segments belong to the same river or stream.
 
 Now let's make those named streams stand out a little more with some visual hierarchy.  In the Layer Properties, you've seen that you can change any of the symbols one at a time.  But we have a lot of named streams and I would guess you don't want to change each of these.  We can change many or all of them at once.  In the list of streams, single click on the first entry to highlight it.  Scroll down to the bottom of the list.  Hold down the Shift key and click on the last **named** creek (not the blank entry) to highlight all of the named creeks. Right click on any of the highlighted names, and select "Change Width".  Change the number to 0.50 and click OK.  Click Apply in the Layer Properties dialog to see how that changed.
 
 ![alt text](https://github.com/MicheleTobias/Geospatial-Data-Visualization/blob/master/images/Line_NominalData.PNG "Nominal line data")
 
-The exercise we just worked through is an excellent example of how scale changes how you represent data.  Zooming in on this data to roughly city-level scale, this example makes sense, but if I try to use this same visualization at the scale of the entire dataset or even the state, it quickly looses it's ability to communicate well (in fact, it starts to look like party streamers, which isn't what we want).
+The exercise we just worked through is an excellent example of how scale changes how you represent data.  Zooming in on this data to roughly city-level scale, this example makes sense, but if I try to use this same visualization at the scale of the entire dataset or even the state, it quickly loses its ability to communicate well (in fact, it starts to look like party streamers, which isn't what we want).
 
 ![alt text](https://github.com/MicheleTobias/Geospatial-Data-Visualization/blob/master/images/Line_NominalData_ZoomOut.PNG "Nominal line data zoomed out to show that at a smaller map scale, the lines no longer look like rivers")
 
@@ -131,7 +131,7 @@ The FCODE column classifies each line segment as different kinds of linear water
 
 Let's focus on the Rivers/Streams line type (FTYPE 460 or FCODE 46006, 46003, and 46007).  This subset of the data is Ordinal Data, or categories that imply a hierarchy.  Perennial streams (FCODE 46006) have water all year, while Intermittend streams (FCODE 46003) have water some of the year, and Ephemeral streams (FCODE 46007) have water only occasionally.  For a deeper understanding of the difference between these kinds of streams, Wetlands Professional Services offers a clear explanation of [intermittent vs. ephemeral streams](http://www.wetlandsprofessional.com/intermittent-and-ephemeral-streams.html), as does the [USGS Water Basics Glossary](https://water.usgs.gov/water-basics_glossary.html).
 
-But we know that our dataset has more than just the 3 kinds of streams we are interested in.  How do we isolate just the data we want to see?  As you saw in the Line Nominal Data exercise above, we could categorize the data based on FCODE, and then work with the way each category is styled to highlight just the rivers/streams.  But let's look at a different way: Rule-Based Classification. (For those of you who saw the Graduated Classification option on the menu and thought "What about that one? It's for visualizing hierarchy in data, right?" I'd respond that you're definitely thinking like a cartographer, but the Graduated option is for numerical data where the numbers can be compared as numbers.  Our numbers really aren't numbers but categories and while we know perennial > intermittend > ephemeral, their FCODEs don't work that way. 46006 > 46003 but 46003 !> 46007.  We'll use Graduated later, don't worrry!)
+But we know that our dataset has more than just the 3 kinds of streams we are interested in.  How do we isolate just the data we want to see?  As you saw in the Line Nominal Data exercise above, we could categorize the data based on FCODE, and then work with the way each category is styled to highlight just the rivers/streams.  But let's look at a different way: Rule-Based Classification. (For those of you who saw the Graduated Classification option on the menu and thought "What about that one? It's for visualizing hierarchy in data, right?" I'd respond that you're definitely thinking like a cartographer, but the Graduated option is for numerical data where the numbers can be compared as numbers.  Our numbers really aren't numbers but categories and while we know perennial > intermittent > ephemeral, their FCODEs don't work that way. 46006 > 46003 but 46003 !> 46007.  We'll use Graduated later, don't worry!)
 
 Open up the Layer Properties for your Flowlines data again and go to the Style tab.  From the drop-down menu at the top, choose Rule-based.
 
@@ -202,7 +202,7 @@ In this case, we will need to use an *If Statement* to tell QGIS that if a line 
 
 Expand the Conditionals list (in the middle of the window).  Click once on "if" to display an explanation of what this function does and how to use it.  *If* takes three arguments: the condition we want to consider (the FTYPE should be 460), what to display if that condition is true (the Length_Meters value from the attribute table), and finally what to do if the condition isn't true (display nothing... make it null).
 
-Now that we know what *if* does, let's build our query.  Delete any text in the Expression box.  Double click *if* in the Conditionals list to send it over to the Expressions box.  Expand the Fields and Values list, and double clikc FTYPE to send it over.  Type in = 460, then a comma and a space.  That takes care of the conditional statement.  Now let's double click Lenght_Meters to send it over to the Expressions box.  This is what we want to display if the condition is true.  Add a comma and a space to the query text.  Finally, we need to tell it what to do if the condition is false.  Type NULL and close the parenthese.  Your query should look like this:  if(  "FTYPE" = 460, Length_Meters, NULL)  Check the below the Expressions Box to make sure there's no errors.  Then click OK in this dialog, and Apply in the Layer Properties.
+Now that we know what *if* does, let's build our query.  Delete any text in the Expression box.  Double click *if* in the Conditionals list to send it over to the Expressions box.  Expand the Fields and Values list, and double click FTYPE to send it over.  Type in = 460, then a comma and a space.  That takes care of the conditional statement.  Now let's double click Lenght_Meters to send it over to the Expressions box.  This is what we want to display if the condition is true.  Add a comma and a space to the query text.  Finally, we need to tell it what to do if the condition is false.  Type NULL and close the parentheses.  Your query should look like this:  if(  "FTYPE" = 460, Length_Meters, NULL)  Check the below the Expressions Box to make sure there's no errors.  Then click OK in this dialog, and Apply in the Layer Properties.
 
 ![alt text](https://github.com/MicheleTobias/Geospatial-Data-Visualization/blob/master/images/Line_Ratio_NaturalBreaks_JustStreams.PNG "Map showing the results of the Natural Breaks classification but with just the streams")
 
@@ -244,10 +244,9 @@ Rank_Acres
 AREAACRES or AREASQKM
 
 ## Points
-Points represent data that are small relative to the map scale.  Examples include cities on a map of North America or 
-store locations at County Level  They have a location but no other dimension.  Because points are one-dimension (a single location), they are somewhat different than lines and polygons in the way they can be represented.  They are the only geometry that can be intuitively represented with an icon.  Icons or markers in general can vary in size without compromizing the geometry itself (you can't increase the size of a polygon or length of a line without implications to the data). 
+Points represent data that are small relative to the map scale.  Examples include cities on a map of North America or store locations at County Level.  They have a location but no other dimension.  Because points are one-dimension (a single location), they are somewhat different than lines and polygons in the way they can be represented.  They are the only geometry that can be intuitively represented with an icon.  Icons or markers in general can vary in size without compromising the geometry itself (you can't increase the size of a polygon or length of a line without implications to the data). 
 
-To learn about points, we will use the centroids of the watershed polygons (WBDHU8_Points_SF).  The data is the same, but rather than working with polygons, we will be working with points that are the center of the original polygons.  Points allow us a completely different set of ways to visualiz the data.
+To learn about points, we will use the centroids of the watershed polygons (WBDHU8_Points_SF).  The data is the same, but rather than working with polygons, we will be working with points that are the center of the original polygons.  Points allow us a completely different set of ways to visualize the data.
 
 ### Nominal
 
