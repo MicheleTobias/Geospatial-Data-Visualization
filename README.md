@@ -243,13 +243,22 @@ Working with polygon Ordinal Data is very similar to working with line Ordinal D
 Like Ordinal Data, working with Interval/Ratio Data in polygons is very similar to working with lines, as we did earlier.  The *AREAACRES* or *AREASQKM* both have Interval/Ratio Data (the first being area in acres and the second being area in square kilometers).  Using the Graduated option in the Style Tab, explore and find a visualization for this data that suits the data well.  What story to you want to present to the viewer?  How can you best help the viewer see that story?
 
 ## Points
-Points represent data that are small relative to the map scale.  Examples include cities on a map of North America or store locations at County Level.  They have a location but no other dimension.  Because points are one-dimension (a single location), they are somewhat different than lines and polygons in the way they can be represented.  They are the only geometry that can be intuitively represented with an icon.  Icons or markers in general can vary in size without compromising the geometry itself (you can't increase the size of a polygon or length of a line without implications to the data). 
+Points represent data that are small relative to the map scale.  Examples include cities on a map of North America or store locations at County Level.  They have a location but no other dimension.  Because points are one-dimension (a single location), they are somewhat different than lines and polygons in the way they can be represented.  They are the only geometry that can be intuitively represented with a single icon.  Icons or markers in general can vary in size without compromising the geometry itself (you can't increase the size of a polygon or length of a line without implications to the data). 
 
-To learn about points, we will use the centroids of the watershed polygons (WBDHU8_Points_SF).  The data is the same, but rather than working with polygons, we will be working with points that are the center of the original polygons.  Points allow us a completely different set of ways to visualize the data.
+To learn about points, we will use the centroids of the watershed polygons (*WBDHU8_Points_SF*).  The data is the same, but rather than working with polygons, we will be working with points that are the center of the original polygons.  Points allow us a completely different set of ways to visualize the data.
 
 ### Nominal
 
-NAME column
+The *NAME* column contains nominal data in the watershed centroids layer.
+
+In previous sections, you've seen how to change the look of a single symbol.  Point markers function in much the same way as lines and polygons in terms of making markers.  You can make increasingly complex markers by layering simple shapes.  For example, you can make a target symbol by layering increasingly smaller circles on top of one another and alternating between light and dark color fills.
+
+Alternatively, with points, you have the option of working with meaningful icons.  For example, if you were making a hiking map, you may use icons to indicate the location of the trailhead, restrooms, and ranger station.  Icons can communicate quickly without text labels but only work easily with point data.
+
+QGIS comes with a limited number of icons and symbols in the default installation.  Try out some of the symbols in the Single Symbol option of the Style Tab.  None of these are expecially good for the watershed data we are working with, but it's good to know that the option is there for other datasets you work with.  Also note thaticons are also available to you in the Categorized option as well.  If you select the basic symbol shape you want before you classify your data, when you click the classify button, color palette you select will be applied to the shape you chose.
+
+Things to explore later if you're interested: You can [make your own markers](https://github.com/MicheleTobias/OpenSourceCartography) or use styles developed by other using the [Resources Sharing Plug-In](http://www.akbargumbira.com/qgis_resources_sharing/).
+
 
 ### Ordinal
 
