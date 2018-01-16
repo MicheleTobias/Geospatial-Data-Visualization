@@ -289,6 +289,11 @@ The type of data needs to drive your choices for visualization, but don't hesita
 
 Text labels can also help viewers interpret what they see.  Graduated circles help get a general idea of the watershed size compared to other nearby watersheds, but a text label with the size in acres can also be informative and helpful.
 
+# Conclusion
+
+You have looked at a number of options for visualizing data in QGIS 2.18 based on the type of data you are working with.  The principles and guidelines you have learned are applicable in any GIS and to any data visualization project (perhaps in R?).  The key is to think about what kind of data you are working with (Nominal, Ordinal, Interval, or Ratio) and think about what is the best way to display that data in a way that communicates effectively with your audience.  Sometimes the answer is to combine data into one image.  Sometimes, you need to simplify.  It's always a good idea to get feedback from friends or colleagues to make sure your product communicates to others what you think it does.
+
+Continue to explore! Below you will find more resources and sites for inspiration for your next project.
 
 
 # Additional Resources:
@@ -307,11 +312,13 @@ Text labels can also help viewers interpret what they see.  Graduated circles he
 
 ## Galleries
 
+1. [QGIS Map Gallery](https://www.flickr.com/groups/qgis/pool/)
 1. [Python Graph Gallery](https://python-graph-gallery.com/)
 1. [D3 Gallery](https://github.com/d3/d3/wiki/Gallery)
 
 ## Colors
 
+1. [Colorzilla browser plugin](http://www.colorzilla.com/) - select colors directly from webpages, then paste color codes into QGIS color interfaces
 1. [Color Brewer](http://colorhunt.co/)
 1. [Adobe Color](https://color.adobe.com/create/color-wheel/)
 1. [Color Hunt](http://colorhunt.co/)
