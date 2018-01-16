@@ -237,11 +237,10 @@ Explore options to create new effects:
 
 ### Ordinal
 
-Rank_Acres
+Working with polygon Ordinal Data is very similar to working with line Ordinal Data.  Rather than walking you through very similar steps again, I'll challenge you to try this on your own!  The column *Rank_Acres* ranks the size of the polygons with 1 being the largest and 6 being the smallest in size.  Should the numbers be treated as numbers or are they really categories with a numeric label?  Should you use the Categorized or the Graduated option for this kind of data?
 
 ### Interval/Ratio
-
-AREAACRES or AREASQKM
+Like Ordinal Data, working with Interval/Ratio Data in polygons is very similar to working with lines, as we did earlier.  The *AREAACRES* or *AREASQKM* both have Interval/Ratio Data (the first being area in acres and the second being area in square kilometers).  Using the Graduated option in the Style Tab, explore and find a visualization for this data that suits the data well.  What story to you want to present to the viewer?  How can you best help the viewer see that story?
 
 ## Points
 Points represent data that are small relative to the map scale.  Examples include cities on a map of North America or store locations at County Level.  They have a location but no other dimension.  Because points are one-dimension (a single location), they are somewhat different than lines and polygons in the way they can be represented.  They are the only geometry that can be intuitively represented with an icon.  Icons or markers in general can vary in size without compromising the geometry itself (you can't increase the size of a polygon or length of a line without implications to the data). 
