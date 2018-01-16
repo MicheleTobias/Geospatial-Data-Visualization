@@ -266,11 +266,27 @@ Rank_Acres
 
 ### Interval/Ratio
 
-AREAACRES or AREASQKM
+You've already seen how to categorize your data based on the data in a column of you attribute table, showing different classes as different colored markers.  With points you have the unique opportunity to change the size of the entire marker.  
+
+Let's categorize our watershed centroids based on the size of the watershed and visualize the data using different sized circles.
+
+* In the Style Tab of the Layer Properties for your centroids layer, select *Graduated* from the drop-down menu at the top.  For the column to base the classification on, select either *AREAACRES* or *AREASQKM*.  
+* For the *Symbol*, let's pick a circle (or pick any shape you like, but circles are fairly easy to compare visually) and choose a fill color that you think represents the data well.  
+* Now here's the key to making this different than what we've done before: from the *Method* drop-down, pick *Size* instead of *color*.  This will allow us to vary the size of the symbol rather than the color.
+* The rest of the interface should look familiar from before.  Pick the *Mode* for the classification method that works well for this data.  Use the *Histogram* tab to help you understand the distribution of this particular data.
+* What you're ready to see how your classification looks, clicke the *Apply* button.
+
+### Combining Data Types
+
+The type of data needs to drive your choices for visualization, but don't hesitate to combine different kinds of data into one map or graphic to help tell the story you are trying to convey.  Point data can be displayed on top of and in addition to similar data presented as polygons.  For example, you can display your centroid data on top of your watershed polygons to show two different aspects of the data we have about the watersheds.
+
+![alt text](https://github.com/MicheleTobias/Geospatial-Data-Visualization/blob/master/images/Combining_Data_Types.PNG "Map showing watersheds boundaries filled with a different color for each polygon, graduated circles representing acrage, and text labels")
+
+Text labels can also help viewers interpret what they see.  Graduated circles help get a general idea of the watershed size compared to other nearby watersheds, but a text label with the size in acres can also be informative and helpful.
 
 
 ## Raster
-Rasters are much better at representing continuous data (ratio/interval data), such as temperature, but can be used to represent discrete data (nominal and ordinal) as well.  It is common, for example, to find land cover data with nominal cover categories in raster format.
+Rasters are much better at representing continuous data (ratio/interval data), such as temperature, but can be used to represent discrete data (nominal and ordinal) as well.  It is common, for example, to find land cover data with nominal cover categories in raster format.  
 
 ### Nominal
 
