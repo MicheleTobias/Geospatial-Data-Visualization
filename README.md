@@ -58,6 +58,8 @@ How does your representation change with scale?  The campus probably shifted fro
 
 # Hands On Tutorial
 
+In the hands-on section of this tutorial, we will focus on vector data.  What you learn here, though, is applicable to raster data as well.  The key take-home message is to think about what type of data you are working with and how best to represent it.
+
 ## Data
 You'll need to download
 1. California Counties (optional, background data)
@@ -286,17 +288,6 @@ The type of data needs to drive your choices for visualization, but don't hesita
 ![alt text](https://github.com/MicheleTobias/Geospatial-Data-Visualization/blob/master/images/Combining_Data_Types.PNG "Map showing watersheds boundaries filled with a different color for each polygon, graduated circles representing acrage, and text labels")
 
 Text labels can also help viewers interpret what they see.  Graduated circles help get a general idea of the watershed size compared to other nearby watersheds, but a text label with the size in acres can also be informative and helpful.
-
-
-## Raster
-Rasters are much better at representing continuous data (ratio/interval data), such as temperature, but can be used to represent discrete data (nominal and ordinal) as well.  It is common, for example, to find land cover data with nominal cover categories in raster format.  
-
-### Nominal
-
-### Ordinal
-
-### Interval/Ratio
-
 
 
 
