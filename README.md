@@ -1,23 +1,26 @@
-# Geospatial-Data-Visualization
-This is a workshop in progress.  
+# Geospatial-Data-Visualization  
 
 This is a geospatial data visualization workshop with hands-on examples using QGIS 2.14-2.18.
+
+The goals of this workshop are that you will learn basic techniques for visualization techniques appropriate for each type of data and each type of geometry.
 
 # What is Data Visualization?  How does it apply to geospatial data?
 Data visualization is the current term used to describe the process of representing data in a way that communicates clearly.
 
-"Data visualization" has been present in the field of geography for centuries as cartography.
+The concept of "Data visualization" has been present in the field of geography for centuries as cartography.
+
+The purpose of data visualization is to tell a story.  As the cartographer or data scientist, your goal is to identify the story the data tells and to make visualization choices to guide the reader/viewer to understand the story and engage with the data.
 
 # Types of Data
 
-Understanding what type of data you are working with is important.  Where the data shows up on the map is handled by the geometries stored in your spatial data file (shapefile, geojson, geotiff, etc.) but how you choose to represent the attribute (non-spatial) data is up to you.  To communicate clearly, how you represent your data should be driven, in part, by the type of data it is.
+Understanding what type of data you are working with is important.  *Where* the data shows up on the map is driven by the geometries stored in your spatial data file (shapefile, geojson, geotiff, etc.) but how you choose to represent the *attribute* (non-spatial) data is up to you.  To communicate clearly, how you represent your data should be driven, in part, by the type of data it is.
 
 | Type | Explanation | Examples |
 |------|------|------|
-| Nominal | Categories | Land Use Type: agriculture, industrial, residential, etc. |
-| Ordinal | Hierarchical Categories | Business Size: small, medium, large |
+| Nominal | Categories | land use type: agriculture, industrial, residential, etc. |
+| Ordinal | Hierarchical Categories | business size: small, medium, large |
 | Interval | Numbers in which zero has no real meaning, relative distances between numbers has meaning, but ratios between numbers does not make sense | Fahrenheit temperature measurements |
-| Ratio | Numbers with a set zero, ratios between numbers make sense | Weight of harvested biomass |
+| Ratio | Numbers with a set zero, ratios between numbers make sense | weight of harvested biomass |
 
 Reference: [University of Colorado's Cartographic Communication Site](https://www.colorado.edu/geography/gcraft/notes/cartocom/cartocom_f.html)
 
@@ -56,13 +59,15 @@ Try this: Draw UC Davis at the scale of...
 
 How does your representation change with scale?  The campus probably shifted from many polygons, to a single polygon, to a point.
 
+------------------------------------------------------------------------------------------------------
+
 # Hands On Tutorial
 
 In the hands-on section of this tutorial, we will focus on vector data.  What you learn here, though, is applicable to raster data as well.  The key take-home message is to think about what type of data you are working with and how best to represent it.
 
 ## Data
-You'll need to download
-1. California Counties (optional, background data)
+You'll need to download the following data from the data folder in this repository:
+
 1. Watershed Boundaries (Polygons)
 1. Watershed Centroids (Points)
 1. Rivers (Lines)
