@@ -66,7 +66,7 @@ How does your representation change with scale?  The campus probably shifted fro
 In the hands-on section of this tutorial, we will focus on vector data.  What you learn here, though, is applicable to raster data as well.  The key take-home message is to think about what type of data you are working with and how best to represent it.
 
 ## Data
-You'll need to download the following data from the data folder in this repository:
+You'll need to download the following data from the data folder in this repository or from [FigShare](https://figshare.com/s/a59d4d0a8e6d2fadf592):
 
 1. Watershed Boundaries (Polygons)
 1. Watershed Centroids (Points)
