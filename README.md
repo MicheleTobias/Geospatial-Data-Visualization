@@ -295,14 +295,16 @@ The type of data needs to drive your choices for visualization, but don't hesita
 
 Text labels can also help viewers interpret what they see.  Graduated circles help get a general idea of the watershed size compared to other nearby watersheds, but a text label with the size in acres can also be informative and helpful.
 
+# Raster Data
+Raster data (grids) can also have data values that are Nominal, Ordinal, or Interval/Ratio.  The skills you've learned today about visualizing vector data also apply to raster data.  To learn more about how to load and symbolize raster data, see [Module 8 of the QGIS Training Manual](https://docs.qgis.org/2.18/en/docs/training_manual/rasters/index.html).  Remember that how you choose to symbolize the data should be based on the type of data you are working with.
+
 # Conclusion
 
 You have looked at a number of options for visualizing data in QGIS 2.18 based on the type of data you are working with.  The principles and guidelines you have learned are applicable in any GIS and to any data visualization project (perhaps in R?).  The key is to think about what kind of data you are working with (Nominal, Ordinal, Interval, or Ratio) and think about what is the best way to display that data in a way that communicates effectively with your audience.  Sometimes the answer is to combine data into one image.  Sometimes, you need to simplify.  It's always a good idea to get feedback from friends or colleagues to make sure your product communicates to others what you think it does.
 
 Continue to explore! Below you will find more resources and sites for inspiration for your next project.
 
-## Raster Data
-Raster data (grids) can also have data values that are Nominal, Ordinal, or Interval/Ratio.  The skills you've learned today about visualizing vector data also apply to raster data.  To learn more about how to load and symbolize raster data, see [Module 8 of the QGIS Training Manual](https://docs.qgis.org/2.18/en/docs/training_manual/rasters/index.html).
+
 
 
 # Additional Resources:
