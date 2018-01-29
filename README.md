@@ -301,6 +301,9 @@ You have looked at a number of options for visualizing data in QGIS 2.18 based o
 
 Continue to explore! Below you will find more resources and sites for inspiration for your next project.
 
+## Raster Data
+Raster data (grids) can also have data values that are Nominal, Ordinal, or Interval/Ratio.  The skills you've learned today about visualizing vector data also apply to raster data.  To learn more about how to load and symbolize raster data, see [Module 8 of the QGIS Training Manual](https://docs.qgis.org/2.18/en/docs/training_manual/rasters/index.html).
+
 
 # Additional Resources:
 
