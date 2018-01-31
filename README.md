@@ -1,6 +1,6 @@
 # Geospatial-Data-Visualization  
 
-This is a geospatial data visualization workshop with hands-on examples using QGIS 2.14-2.18.
+This is a geospatial data visualization workshop with hands-on examples using [QGIS 2.14-2.18](https://qgis.org/en/site/forusers/download.html).
 
 The goals of this workshop are that you will learn basic techniques for visualization techniques appropriate for each type of data and each type of geometry.
 
