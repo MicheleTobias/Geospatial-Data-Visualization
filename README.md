@@ -297,7 +297,39 @@ The type of data needs to drive your choices for visualization, but don't hesita
 Text labels can also help viewers interpret what they see.  Graduated circles help get a general idea of the watershed size compared to other nearby watersheds, but a text label with the size in acres can also be informative and helpful.
 
 ## Raster Data
-Raster data (grids) can also have data values that are Nominal, Ordinal, or Interval/Ratio.  The skills you've learned today about visualizing vector data also apply to raster data.  To learn more about how to load and symbolize raster data, see [Module 8 of the QGIS Training Manual](https://docs.qgis.org/2.18/en/docs/training_manual/rasters/index.html).  Remember that how you choose to symbolize the data should be based on the type of data you are working with.
+Raster data (grids) can also have data values that are Nominal, Ordinal, or Interval/Ratio.  The skills you've learned today about visualizing vector data also apply to raster data.  
+
+### Interval & Ratio
+Let's start our raster investigation with inteval & ratio data.
+
+You can remove the previous data from your map canvas or uncheck the boxes in the Layers Panel.
+
+Load some raster data:
+1. Click the Add Raster Layer button (it looks like a checker board).
+1. Navigate to where you saved your workshop data and select the DEM_SF.tif file.
+1. Click *Open*.
+
+Now you should see a gray scale image that roughly looks like the San Francisco peninsula.  This is a Digital Elevation Model (DEM).  Each cell in the raster contains a number representing the elevation at that location.  
+
+Let's style this data:
+1. Open the Layer Properties for your DEM (right click on the layer in the Layers Panel and select *Properties*).
+1. Click on the *Style* tab on the left side.
+1. For the *Render type* drop down, select *Singleband pseudocolor*.
+1. For the *Color*, select *New color ramp*
+1. Select *cpt-city* from the drop down and click *Ok*
+1. Pick *Topography* from the options on the left.
+1. Pick *c3t1* for our gradient.  Or select another scheme you think will work well for representing topography.  Click *Ok*.
+1. Next, you'll see a dialog asking what you want to call your new gradient.  I suggest leaving the default name, but you can call it what you like.  Click *Ok* when you're done.
+1. You'll see that the color ramp in the Layers Properties has updated.  Click *Apply* to see what it looks like with our data.
+1. Let's make the water look more like water.  Double click on the color box representing the lowest value to open the Change Color dialog.  Select a shade of blue that you lick and click *Ok*.  And then click *Apply* in the Layer Properties to see how it looks.  
+1. Continue to adjust the colors until you are happy with the colors, then click *Ok*.
+
+![alt text](https://github.com/MicheleTobias/Geospatial-Data-Visualization/blob/master/images/Raster_Continuous.PNG "Digital Elevation Model with a continuous color ramp")
+
+### Nominal
+
+### Continue Learning
+To learn more about how to load and symbolize raster data, see [Module 8 of the QGIS Training Manual](https://docs.qgis.org/2.18/en/docs/training_manual/rasters/index.html).  Remember that how you choose to symbolize the data should be based on the type of data you are working with.
 
 # Conclusion
 
