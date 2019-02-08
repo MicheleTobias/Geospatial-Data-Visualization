@@ -71,6 +71,7 @@ You'll need to download the following data from the data folder in this reposito
 1. Watershed Boundaries (Polygons)
 1. Watershed Centroids (Points)
 1. Rivers (Lines)
+1. Digital Elevation Model of San Francisco (Raster)
 
 ## Load Data into QGIS
 
