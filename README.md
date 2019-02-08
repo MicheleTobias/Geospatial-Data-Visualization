@@ -321,12 +321,29 @@ Let's style this data:
 1. Pick *c3t1* for our gradient.  Or select another scheme you think will work well for representing topography.  Click *Ok*.
 1. Next, you'll see a dialog asking what you want to call your new gradient.  I suggest leaving the default name, but you can call it what you like.  Click *Ok* when you're done.
 1. You'll see that the color ramp in the Layers Properties has updated.  Click *Apply* to see what it looks like with our data.
-1. Let's make the water look more like water.  Double click on the color box representing the lowest value to open the Change Color dialog.  Select a shade of blue that you lick and click *Ok*.  And then click *Apply* in the Layer Properties to see how it looks.  
+
+This is good, but I think it would be easier to understand if we set the water to a more intuitive color.  Yes, this means our color ramp will have a disconnect in it, but I think it will help us visually interpret the data better.
+1. In the Layer Properties, double click on the color box representing the lowest value to open the Change Color dialog.  Select a shade of blue that you lick and click *Ok*.  And then click *Apply* in the Layer Properties to see how it looks.  
 1. Continue to adjust the colors until you are happy with the colors, then click *Ok*.
 
 ![alt text](https://github.com/MicheleTobias/Geospatial-Data-Visualization/blob/master/images/Raster_Continuous.PNG "Digital Elevation Model with a continuous color ramp")
 
-### Nominal
+### Nominal and Ordinal
+As we've seen with the vector data, data visualization with nominal and ordinal data (essentially categorized data) is very similar.
+
+Let's make some categories in our DEM layer.  We'll have 4 categories of elevation: low, medium, high, and water.  We could make a new layer with the Raster Calculator, but let's just work with the data visually and not make more data to store.
+1. Open the Layer Properties for our DEM layer and go to the *Style* tab.
+1. Expand the *Load min/max values* area of the dialog.  Select *Min/max*, change the *Accuracy* drop down to *Actual (slower)*, and then click *Load*.  This will ensure that the program uses all of the values in our raster to make categories and not a subsample of values.
+1. Below the large box where the color ramp appears, find the *Mode* dropdown menu and select *Equal interval*.  To the right of that, change the *Classes* box to 4.
+1. We can change the numbers in the *Value* and *Label* columns of the color ramp to adjust the break points of the ramp.  For the *Value* column, change the breaks to 1, 50, 150, and leave the final one as *inf*.  Notice how the Label column changes.
+1. In the *Label* column, change the labels to "water", "low", "medium", and "high".  
+1. We can change the colors as well.  Because these are categories, we can pick 4 different colors, but also because there is a hierarchical relationship between the low, medium, and high categories, we might consider a gradient of sorts.  I chose a blue for the water, green for low, yellow for medium, and brown for high.
+1. Finally, change the *Interpolation* type to *Discrete* so the 
+
+![alt text](https://github.com/MicheleTobias/Geospatial-Data-Visualization/blob/master/images/Raster_Ordinal_Properties.PNG "Layer Properties for the DEM color selection")
+
+![alt text](https://github.com/MicheleTobias/Geospatial-Data-Visualization/blob/master/images/Raster_Ordinal.PNG "DEM categorized into water and low, medium, and high elevations.")
+
 
 ### Continue Learning
 To learn more about how to load and symbolize raster data, see [Module 8 of the QGIS Training Manual](https://docs.qgis.org/2.18/en/docs/training_manual/rasters/index.html).  Remember that how you choose to symbolize the data should be based on the type of data you are working with.
