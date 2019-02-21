@@ -13,7 +13,7 @@ The purpose of data visualization is to tell a story.  As the cartographer or da
 
 # Types of Data
 
-Understanding what type of data you are working with is important.  *Where* the data shows up on the map is driven by the geometries stored in your spatial data file (shapefile, geojson, geotiff, etc.) but how you choose to represent the *attribute* (non-spatial) data is up to you.  To communicate clearly, how you represent your data should be driven, in part, by the type of data it is.
+Understanding what type of data (also known as "measurement scales") you are working with is important.  *Where* the data shows up on the map is driven by the geometries stored in your spatial data file (shapefile, geojson, geotiff, etc.) but how you choose to represent the *attribute* (non-spatial) data is up to you.  To communicate clearly, how you represent your data should be driven, in part, by the type of data it is.
 
 | Type | Explanation | Examples |
 |------|------|------|
@@ -103,11 +103,19 @@ Let's explore this data some more through visualizations.
 
 We'll start with a single symbol for all the lines to get familiar with this interface.
 
-Right click on the layer in the *Layers Panel* again, but this time, pick *Properties* to open the *Layer Properties*.  There's a lot of options in this particular interface (notice all the "tabs" on the left side of the window?).  Click on the *Style* tab.
+ * Right click on the layer in the *Layers Panel* again, but this time, pick *Properties* to open the *Layer Properties*.  There's a lot of options in this particular interface (notice all the "tabs" on the left side of the window?).  
+ * Click on the *Style* tab.
+ * The default style for lines is a single *Simple Line* of a randomly chosen color (mine is currently hot pink and a little hard on the eyes).  In the *Color* drop down, pick *choose color* to open the *Select Color dialog* or just click in the colored box to open the same dialog.  
+ * Tabs across the top of the *Select Color dialog* give you an array of options for picking a color.  Pick one that you like in any way you like (one fun option is to look up an HTML color that you like from a website and put that into the *HTML Notation* box... #457a94 is a nice blue...).  
+ * Click the *Apply* button to see the effect on your map canvas.
 
-The default style for lines is a single *Simple Line* of a randomly chosen color (mine is currently hot pink and a little hard on the eyes).  In the *Color* drop down (mine is hot pink, yours will be whatever color QGIS picked for you) pick *choose color* to open the *Select Color dialog* or just click in the colored box to open the same dialog.  Tabs across the top of the *Select Color dialog* give you an array of options for picking a color.  Pick one that you like in any way you like (one fun option is to look up an HTML color that you like from a website and put that into the *HTML Notation* box... #457a94 is a nice blue...).  Click the *Apply* button to see the effect on your map canvas.
-
-You can make more complicated markers by stacking up different lines.  Let's make our current line rather wide - change the width to 2.0.  Add a symbol layer with the *+* button below the white box that shows you the line.  It should have added a layer to your line above your wide blue line.  Making sure the new line is selected in the list of line layers, pick a new color.  I chose white.  Change the *Pen Style* to a *Dot Line*.  Click *Apply* to see the effect in your map canvas.  Ok, this style doesn't really work at the scale of the whole watershed, but if you click *OK* to close the dialog, then zoom in to one section, you'll be better able to see the affects.
+You can make more complicated markers by stacking up different lines.  
+ * Let's make our current line rather wide - change the width to 2.0.  
+ * Add a symbol layer with the *+* button below the white box that shows you the line.  It should have added a layer to your line above your wide blue line.  
+ * Making sure the new line is selected in the list of line layers, pick a new color.  I chose white.  
+ * Change the *Pen Style* to a *Dot Line*.  
+ * Click *Apply* to see the effect in your map canvas.  
+ * Ok, this style doesn't really work at the scale of the whole watershed, but if you click *OK* to close the dialog, then zoom in to one section, you'll be better able to see the affects.
 
 ![alt text](https://github.com/MicheleTobias/Geospatial-Data-Visualization/blob/master/images/Line_SingleSymbol.PNG "Single symbol stacked line marker for rivers")
 
@@ -115,15 +123,25 @@ So we've seen that having just one marker type sometimes doesn't help us underst
 
 #### By Name
 
-Open the Layer Properties for your Flowlines layer again and back to the Style tab.
+Let's try visualizing our waterways by their names.
+ * Open the Layer Properties for your Flowlines layer again and back to the Style tab.
+ * From the drop-down menu at the top of the menu that currently says *single symbol*, pick *Categorized*.  This will erase the style we made previously, but that's ok.
+ * From the *Column* drop-down, pick *GNIS_NAME*, which has the name of the water body.  
+ * For the *Color Ramp*, pick *Random Colors*.  We don't want to imply that there is any hierarchical relationship between the streams so *Random Colors* is a good choice.  
+ * Click *Classify* under the big white box to show all the categories.  
+ * Click *Apply* to see what this looks like.  You may want to zoom in to one area.
 
-From the drop-down menu at the top of the menu that currently says *single symbol*, pick *Categorized*.  This will erase the style we made previously, but that's ok.
+In mine I'm noticing there are a lot of lines of one color (mine are pink).  You probably have a lot of lines in a different color.  If I scroll down to the bottom of my list of symbols, I can see that the unnamed (blank) streams were assigned to a shade of pink.  I'd like to change this.  
+ * Double click on the line symbol to open the Symbol Selector dialog.  
+ * Because these are unnamed, I want them to be gray. This dialog works in a very similar way to the dialog we worked with earlier. Pick your new color, then click *OK* in this dialog.  
+ * In the *Layer Properties* dialog, click *Apply* to see how that changed.  Ok! Now I can easily see what's named and what's not and also which line segments belong to the same river or stream.
 
-From the *Column* drop-down, pick *GNIS_NAME*, which has the name of the water body.  For the *Color Ramp*, pick *Random Colors*.  We don't want to imply that there is any hierarchical relationship between the streams so *Random Colors* is a good choice.  Click *Classify* under the big white box to show all the categories.  Click *Apply* to see what this looks like.  You may want to zoom in to one area.
-
-In mine I'm noticing there are a lot of hot pink lines (Hey, QGIS random color generator, what's up with all the pink?).  You probably have a lot of lines in a different color.  If I scroll down to the bottom of my list of symbols, I can see that the unnamed (blank) streams were assigned to a shade of pink.  I'd like to change this.  Double click on the line symbol to open the Symbol Selector dialog.  Because these are unnamed, I want them to be gray. This dialog works in a very similar way to the dialog we worked with earlier. Pick your new color, then click *OK* in this dialog.  In the *Layer Properties* dialog, click *Apply* to see how that changed.  Ok! Now I can easily see what's named and what's not and also which line segments belong to the same river or stream.
-
-Now let's make those named streams stand out a little more with some visual hierarchy.  In the *Layer Properties*, you've seen that you can change any of the symbols one at a time.  But we have a lot of named streams and I would guess you don't want to change each of these one at a time.  We can change many or all of them at once.  In the list of streams, single click on the first entry to highlight it.  Scroll down to the bottom of the list.  Hold down the Shift key and click on the last **named** creek (not the blank entry) to highlight all of the named creeks. Right click on any of the highlighted names, and select *Change Width*.  Change the number to 0.50 and click *OK*.  Click *Apply* in the *Layer Properties* dialog to see how that changed.
+Now let's make those named streams stand out a little more with some visual hierarchy.  In the *Layer Properties*, you've seen that you can change any of the symbols one at a time.  But we have a lot of named streams and I would guess you don't want to change each of these one at a time.  We can change many or all of them at once.  
+ * In the list of streams, single click on the first entry to highlight it.  
+ * Scroll down to the bottom of the list.  Hold down the Shift key and click on the last **named** creek (not the blank entry) to highlight all of the named creeks. 
+ * Right click on any of the highlighted names, and select *Change Width*.  
+ * Change the number to 0.50 and click *OK*.  
+ * Click *Apply* in the *Layer Properties* dialog to see how that changed.
 
 ![alt text](https://github.com/MicheleTobias/Geospatial-Data-Visualization/blob/master/images/Line_NominalData.PNG "Nominal line data")
 
