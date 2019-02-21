@@ -63,7 +63,7 @@ How does your representation change with scale?  The campus probably shifted fro
 
 # Hands On Tutorial
 
-In the hands-on section of this tutorial, we will focus on vector data.  What you learn here, though, is applicable to raster data as well.  The key take-home message is to think about what type of data you are working with and how best to represent it.
+Now we'll work on the hands-on section of this tutorial.  The key take-home message is to think about what type of data you are working with and how best to represent it.
 
 ## Data
 You'll need to download the following data from the data folder in this repository or from **[this Box folder](https://ucdavis.box.com/s/sh73tlyvewlq4htfbu56l591wh2q5mi4)**:
