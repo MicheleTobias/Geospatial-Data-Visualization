@@ -75,7 +75,7 @@ You'll need to download the following data from the data folder in this reposito
 
 ## Load Data into QGIS
 
-Open QGIS (2.14 or 2.18... yes, this is going to need to be re-written for QGIS 3.0 soon... volunteers to help, please contact Michele).  Start a new project by either clicking on the white rectangle icon (with the corner turned down) or selecting "new" under the Project menu.  You now should have a blank map canvas ready to go.
+Open QGIS (2.14 or 2.18... these instructions should mostly work for QGIS 3.0 soon with the exception of loading data).  Start a new project by either clicking on the white rectangle icon (with the corner turned down) or selecting "new" under the Project menu.  You now should have a blank map canvas ready to go.
 
 Load the workshop data into QGIS: Layer menu -> Add Layer -> Add Vector Layer.  Alternatively, you can use the Add Vector Layer button on the toolbar.  Add the following data:
 * Flowlines.geojson - rivers and other linear water structures
